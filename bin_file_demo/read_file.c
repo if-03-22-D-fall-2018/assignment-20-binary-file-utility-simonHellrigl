@@ -20,10 +20,11 @@ int main(int argc, char const *argv[]) {
   struct Person p[CACHE_SIZE];
 
   int n = fread(p, sizeof(struct Person), CACHE_SIZE, fd);
+
   printf("%d items read\n", n);
   set_ID_auto(p);
   for (int i = 0; i < CACHE_SIZE; i++) {
-    printf("%d %s %s %d\n", p[i].id, p[i].first_name, p[i].last_name, p[i].age);
+    printf(" %s %s %d\n", /*p[i].id,*/ p[i].first_name, p[i].last_name, p[i].age);
   }
 
   /*int idTemp;
@@ -52,7 +53,7 @@ void set_ID_auto(struct Person p[CACHE_SIZE])
 
 struct Person get_at_pos(struct Person p[CACHE_SIZE], int id)
 {
-  
+
   return p[id];
 
 }
