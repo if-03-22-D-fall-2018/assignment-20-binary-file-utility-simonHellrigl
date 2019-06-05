@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 {
   struct Person p;
   FILE* fd = fopen(FILE_NAME, "w");
-  
-  fwrite("1", sizeof(struct Person), 1, fd);
+
+  //fwrite("1", sizeof(struct Person), 1, fd);
   return 0;
 }
